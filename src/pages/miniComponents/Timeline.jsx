@@ -6,25 +6,31 @@ const Timeline = () => {
       _id: "1",
       title: "Matrix",
       timeline: { from: "2015", to: "2016" },
-      description: "Matrix from NIC Janghai, UP Board, Intermidiate",
+      description: "Matrix from NIC Janghai, UP Board",
     },
     {
       _id: "2",
       title: "Intermidiate",
       timeline: { from: "2017", to: "2018" },
-      description: "Intermidiate from NIC Janghai, UP Board, Bachelor of Computer Application",
+      description: "Intermidiate from NIC Janghai, UP Board",
     },
     {
       _id: "3",
-      title: "BCA",
+      title: "Bachelor of Computer Application",
       timeline: { from: "2019", to: "2022" },
-      description: "BCA from University of Allahabad, Master of Computer Application",
+      description: "Bachelor of Computer Application from University of Allahabad",
     },
     {
       _id: "4",
-      title: "MCA",
+      title: "Internship at ASPIRANT SOLUTIONS",
+      timeline: { from: "March 2023", to: "September 2023" },
+      description: "Worked as Trainee Web Developer at Aspirant Solutions Mumbai",
+    },
+    {
+      _id: "5",
+      title: "Master of Computer Application",
       timeline: { from: "2022", to: "Present" },
-      description: "MCA from IGNOU",
+      description: "Master of Computer Application from IGNOU",
     },
   ]);
 
