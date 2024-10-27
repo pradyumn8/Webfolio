@@ -4,6 +4,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 // Importing project images from assets folder
+import project99 from "../../img/project99.png";
+import project98 from "../../img/project98.png";
+import project97 from "../../img/project97.png";
 import project96 from "../../img/project96.png";
 import project95 from "../../img/project95.png";
 import project94 from "../../img/project94.png";
@@ -106,6 +109,9 @@ const Portfolio = () => {
   const [viewAll, setViewAll] = useState(false);
 
   const projects = [
+    { _id: "99", title: "Project 99", projectBanner: project99, codeLink: "https://github.com/pradyumn8/", liveLink: "https://prescripto-2-3buf.onrender.com/" },
+    { _id: "98", title: "Project 98", projectBanner: project98, codeLink: "https://github.com/pradyumn8/Netflix-Clone.git", liveLink: "https://screeniflix.netlify.app/ " },
+    { _id: "97", title: "Project 97", projectBanner: project97, codeLink: "https://github.com/pradyumn8/Bg.Removal.git", liveLink: "https://bgc-removal.netlify.app/" },
     { _id: "96", title: "Project 96", projectBanner: project96, codeLink: "https://github.com/pradyumn8/React.js-Projects/tree/main/pwdGenerator", liveLink: "https://todocontext-localstorage.netlify.app/" },
     { _id: "95", title: "Project 95", projectBanner: project95, codeLink: "https://github.com/pradyumn8/React.js-Projects/tree/main/TodoContextLocalStorage", liveLink: "https://todocontext-localstorage.netlify.app/" },
     { _id: "94", title: "Project 94", projectBanner: project94, codeLink: "https://github.com/pradyumn8/React.js-Projects/tree/main/ThemeSwitcher", liveLink: "https://theme-switcherrs.netlify.app/" },
@@ -203,7 +209,7 @@ const Portfolio = () => {
     { _id: "85", title: "Project 85", projectBanner: project85, codeLink: "https://github.com/pradyumn8/WebDev/tree/main/Random%20Choice%20Picker", liveLink: "https://random-choice-piccker.netlify.app/" },
     { _id: "86", title: "Project 86", projectBanner: project86, codeLink: "#", liveLink: "https://02d0-list.netlify.app/" }
   ];
-  
+
 
   return (
     <div>
@@ -236,47 +242,47 @@ const Portfolio = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {viewAll
           ? projects.map((element) => {
-              return (
-                <div key={element._id} className="relative group">
-                  <img
-                    src={element.projectBanner}
-                    alt={element.title}
-                    className="w-full h-auto"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-gray-800 bg-opacity-70 text-white transition-opacity duration-300">
-                    <div className="flex flex-col items-center gap-2">
-                      <a href={element.codeLink} target="_blank" rel="noopener noreferrer" className="bg-blue-500 px-4 py-2 rounded">
-                        Code
-                      </a>
-                      <a href={element.liveLink} target="_blank" rel="noopener noreferrer" className="bg-green-500 px-4 py-2 rounded">
-                        Live
-                      </a>
-                    </div>
+            return (
+              <div key={element._id} className="relative group">
+                <img
+                  src={element.projectBanner}
+                  alt={element.title}
+                  className="w-full h-auto"
+                />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-gray-800 bg-opacity-70 text-white transition-opacity duration-300">
+                  <div className="flex flex-col items-center gap-2">
+                    <a href={element.codeLink} target="_blank" rel="noopener noreferrer" className="bg-blue-500 px-4 py-2 rounded">
+                      Code
+                    </a>
+                    <a href={element.liveLink} target="_blank" rel="noopener noreferrer" className="bg-green-500 px-4 py-2 rounded">
+                      Live
+                    </a>
                   </div>
                 </div>
-              );
-            })
+              </div>
+            );
+          })
           : projects.slice(0, 9).map((element) => {
-              return (
-                <div key={element._id} className="relative group">
-                  <img
-                    src={element.projectBanner}
-                    alt={element.title}
-                    className="w-full h-auto"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-gray-800 bg-opacity-70 text-white transition-opacity duration-300">
-                    <div className="flex flex-col items-center gap-2">
-                      <a href={element.codeLink} target="_blank" rel="noopener noreferrer" className="bg-blue-500 px-4 py-2 rounded">
-                        Code
-                      </a>
-                      <a href={element.liveLink} target="_blank" rel="noopener noreferrer" className="bg-green-500 px-4 py-2 rounded">
-                        Live
-                      </a>
-                    </div>
+            return (
+              <div key={element._id} className="relative group">
+                <img
+                  src={element.projectBanner}
+                  alt={element.title}
+                  className="w-full h-auto"
+                />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-gray-800 bg-opacity-70 text-white transition-opacity duration-300">
+                  <div className="flex flex-col items-center gap-2">
+                    <a href={element.codeLink} target="_blank" rel="noopener noreferrer" className="bg-blue-500 px-4 py-2 rounded">
+                      Code
+                    </a>
+                    <a href={element.liveLink} target="_blank" rel="noopener noreferrer" className="bg-green-500 px-4 py-2 rounded">
+                      Live
+                    </a>
                   </div>
                 </div>
-              );
-            })}
+              </div>
+            );
+          })}
       </div>
       {projects.length > 9 && (
         <div className="w-full text-center my-9">

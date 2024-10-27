@@ -7,33 +7,37 @@ import { toast } from "react-toastify";
 
 const Contact = () => {
   const [senderName, setSenderName] = useState("");
-  const [subject, setSubject] = useState("");
+  const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
-  const handleMessage = async (e) => {
+  const sendMail = async (e) => {
     e.preventDefault();
     setLoading(true);
-    await axios
-      .post(
-        "http://localhost:4000/api/v1/message/send",
-        { senderName, subject, message },
+    try {
+      const { data } = await axios.post(
+        "https://webfolio-backend-i0bb.onrender.com",
+        {
+          name: senderName, 
+          email,
+          message,
+        },
         {
           withCredentials: true,
           headers: { "Content-Type": "application/json" },
         }
-      )
-      .then((res) => {
-        toast.success(res.data.message);
-        setSenderName("");
-        setSubject("");
-        setMessage("");
-        setLoading(false);
-      })
-      .catch((error) => {
-        toast.error(error.response.data.message);
-        setLoading(false);
-      });
+      );
+      setSenderName(""); // corrected here as well
+      setEmail("");
+      setMessage("");
+      toast.success(data.message);
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+      toast.error(error.response.data.message);
+    }
   };
+
+
   return (
     <>
       <div className="overflow-x-hidden">
@@ -52,7 +56,7 @@ const Contact = () => {
           <span className="absolute w-full h-1 top-7 sm:top-7 
           md:top-8 lg:top-11 z-[-1] bg-slate-200"></span>
         </div>
-        <form onSubmit={handleMessage} className="flex flex-col gap-6">
+        <form onSubmit={sendMail} className="flex flex-col gap-6">
           <div className="flex flex-col gap-2 px-1.5">
             <Label className="text-xl">Your Name</Label>
             <Input
@@ -62,11 +66,12 @@ const Contact = () => {
             />
           </div>
           <div className="flex flex-col gap-2 px-1.5">
-            <Label className="text-xl">Subject</Label>
+            <Label className="text-xl">Email</Label>
             <Input
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
-              placeholder="Subject"
+            type='email'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email"
             />
           </div>
           <div className="flex flex-col gap-2 px-1.5">

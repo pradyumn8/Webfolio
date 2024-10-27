@@ -9,20 +9,10 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Typewriter } from "react-simple-typewriter";
 import { Button } from "@/components/ui/button";
-import axios from "axios";
 
 const Hero = () => {
   const [user, setUser] = useState({});
-  useEffect(() => {
-    const getMyProfile = async () => {
-      const { data } = await axios.get(
-        "http://localhost:4000/api/v1/user/portfolio/me",
-        { withCredentials: true }
-      );
-      setUser(data.user);
-    };
-    getMyProfile();
-  }, []);
+
   return (
     <div className="w-full">
       <div className="flex items-center gap-2 mb-2">
