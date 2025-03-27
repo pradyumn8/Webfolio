@@ -4,6 +4,16 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 // Importing project images from assets folder
+import project109 from "../../img/project109.png";
+import project108 from "../../img/project108.png";
+import project107 from "../../img/project107.png";
+import project106 from "../../img/project106.png";
+import project105 from "../../img/project105.png";
+import project104 from "../../img/project104.png";
+import project103 from "../../img/project103.png";
+import project102 from "../../img/project102.png";
+import project101 from "../../img/project101.png";
+import project100 from "../../img/project100.png";
 import project99 from "../../img/project99.png";
 import project98 from "../../img/project98.png";
 import project97 from "../../img/project97.png";
@@ -109,7 +119,17 @@ const Portfolio = () => {
   const [viewAll, setViewAll] = useState(false);
 
   const projects = [
-    { _id: "99", title: "Project 99", projectBanner: project99, codeLink: "https://github.com/pradyumn8/", liveLink: "https://prescripto-2-3buf.onrender.com/" },
+    { _id: "109", title: "Project 109", projectBanner: project109, codeLink: "https://github.com/pradyumn8/Learning-Management-System.git", liveLink: "https://www.linkedin.com/posts/pradyumna-web-developer_mern-reactjs-mongodb-activity-7292102747133292544-Vnjo?utm_source=share&utm_medium=member_desktop&rcm=ACoAADNX7nIBRaO7HqeHpgahtDzmFfFB6bOPWHg" },
+    { _id: "108", title: "Project 108", projectBanner: project108, codeLink: "https://github.com/pradyumn8/Authentication.git", liveLink: "https://www.linkedin.com/posts/pradyumna-web-developer_mernstack-authenticationsystem-webdevelopment-activity-7271474138861436928-CMDJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAADNX7nIBRaO7HqeHpgahtDzmFfFB6bOPWHg" },
+    { _id: "107", title: "Project 107", projectBanner: project107, codeLink: "https://github.com/pradyumn8/E-commerce.git", liveLink: "https://github.com/pradyumn8/E-commerce.git" },
+    { _id: "106", title: "Project 106", projectBanner: project106, codeLink: "https://github.com/pradyumn8/To-Do-Application-with-API-Integration.git", liveLink: "https://to-do-api-integration.netlify.app/" },
+    { _id: "105", title: "Project 105", projectBanner: project105, codeLink: "https://github.com/pradyumn8/Weather-App.git", liveLink: "https://stormalert.netlify.app/" },
+    { _id: "104", title: "Project 104", projectBanner: project104, codeLink: "https://github.com/pradyumn8/CollegeSphere.git", liveLink: "https://collegesphare.netlify.app/" },
+    { _id: "103", title: "Project 103", projectBanner: project103, codeLink: "https://github.com/pradyumn8/Real-Estate-Website.git", liveLink: "https://estatedev.netlify.app/" },
+    { _id: "102", title: "Project 102", projectBanner: project102, codeLink: "https://github.com/pradyumn8/Pokedex.git", liveLink: "https://pokeddexx.netlify.app/" },
+    { _id: "101", title: "Project 101", projectBanner: project101, codeLink: "https://github.com/pradyumn8/Imagify.git", liveLink: "https://imagify-1.onrender.com/" },
+    { _id: "100", title: "Project 100", projectBanner: project100, codeLink: "https://github.com/pradyumn8/Youtube-Clone.git", liveLink: "https://youtube-clone-umt1.onrender.com/" },
+    { _id: "99", title: "Project 99", projectBanner: project99, codeLink: "https://github.com/pradyumn8/Prescripto.git", liveLink: "https://prescripto-2-3buf.onrender.com/" },
     { _id: "98", title: "Project 98", projectBanner: project98, codeLink: "https://github.com/pradyumn8/Netflix-Clone.git", liveLink: "https://screeniflix.netlify.app/ " },
     { _id: "97", title: "Project 97", projectBanner: project97, codeLink: "https://github.com/pradyumn8/Bg.Removal.git", liveLink: "https://bgc-removal.netlify.app/" },
     { _id: "96", title: "Project 96", projectBanner: project96, codeLink: "https://github.com/pradyumn8/React.js-Projects/tree/main/pwdGenerator", liveLink: "https://todocontext-localstorage.netlify.app/" },

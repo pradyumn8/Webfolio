@@ -29,7 +29,7 @@ const Timeline = () => {
     {
       _id: "5",
       title: "Master of Computer Application",
-      timeline: { from: "2022", to: "Present" },
+      timeline: { from: "2022", to: "2024" },
       description: "Master of Computer Application from IGNOU",
     },
   ]);

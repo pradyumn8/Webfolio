@@ -26,7 +26,7 @@ const Hero = () => {
       <h1 className="text-tubeLight-effect overflow-x-hidden text-[1.3rem] 
       sm:text-[1.75rem] md:text-[2.2rem] lg:text-[2.8rem] tracking-[15px]">
         <Typewriter
-          words={["DATABASE DEVELOPER", "REACT DEVELOPER", "STUDENT"]}
+          words={["DATABASE DEVELOPER", "FRONTEND DEVELOPER", "STUDENT"]}
           loop={50}
           cursor
           typeSpeed={70}
@@ -57,7 +57,7 @@ const Hero = () => {
             <span>Github</span>
           </Button>
         </Link>
-        <Link to={'https://drive.google.com/file/d/14OPcYmsK23-2e8z1_n3wlCJp8iCa2lu2/view?usp=sharing'} target="_blank">
+        <Link to={'https://drive.google.com/file/d/1nhyQ7FPxVPTo649VxRD5Zy4lr2x8WjjY/view?usp=sharing'} target="_blank">
           <Button className="rounded-[30px] flex items-center gap-2 flex-row">
             <span>
               <ExternalLink />
@@ -67,7 +67,7 @@ const Hero = () => {
         </Link>
       </div>
       <p className="mt-8 text-xl tracking-[2px]">
-        Passionate React and Database Developer with a love for coding and continuous learning.</p>
+        Passionate Frontend Developer and Database Developer with a love for coding and continuous learning.</p>
       <hr className="my-8 md::my-10 " />
     </div>
   );
